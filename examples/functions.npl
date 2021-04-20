@@ -1,9 +1,16 @@
-code chat takes name, message
-  print "$name says, $message"
+Python:
+
+function add(num1, num2):
+  return num1 + num2
+
+print(add(1,2))
+a = add(1,2)
+
+NPL:
+
+code add which takes num1, num2
+  return num1 + num2
 end code
 
-code get name
-  return name
-end code
+Python:
 
-chat name: get name, message: "Hello World!"
