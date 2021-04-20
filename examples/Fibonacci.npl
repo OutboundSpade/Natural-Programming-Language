@@ -1,0 +1,7 @@
+a is 0
+b is 1
+repeat 100 times
+  sum = a + b
+  a is b
+  b is sum
+end repeat

@@ -1,0 +1,9 @@
+code chat takes name, message
+  print "$name says, $message"
+end code
+
+code get name
+  return name
+end code
+
+chat name: get name, message: "Hello World!"

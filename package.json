@@ -1,0 +1,24 @@
+{
+  "name": "Natural-Programming-Language",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Natural-Programming-Language",
+    "npl",
+    "NPL",
+    "nlp",
+    "NLP"
+  ],
+  "author": "Charles Steen",
+  "license": "ISC",
+  "dependencies": {
+    "nexe": "^4.0.0-beta.18"
+  }
+}
