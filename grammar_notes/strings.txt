@@ -1,0 +1,11 @@
+Python:
+
+name = "Ray"
+balance = 15
+print(f'{name} has {balance} dollars')
+
+NPL:
+
+name is "Ray"
+balance is 15
+print "$name has $balance dollars"

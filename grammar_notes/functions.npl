@@ -12,5 +12,8 @@ code add which takes num1, num2
   return num1 + num2
 end code
 
-Python:
 
+a is 5
+b is "Ray"
+
+print "$b has $a dollars"

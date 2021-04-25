@@ -1,0 +1,13 @@
+Python:
+
+function add(num1, num2):
+  return num1 + num2
+
+print(add(1,2))
+a = add(1,2)
+
+NPL:
+
+code add which takes num1, num2
+  return num1 + num2
+end code
