@@ -8,4 +8,7 @@ NPL:
 
 name is "Ray"
 balance is 15
-print "$name has $balance dollars"
+print "$name has $balances dollars"
+
+#This is a comment
+$This is a comment

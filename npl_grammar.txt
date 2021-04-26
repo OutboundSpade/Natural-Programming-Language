@@ -1,3 +1,24 @@
-This is a list of possible commands and their arguments
+// This is a list of possible commands and usage
 
-print 
+(variable) = (value type any)
+
+(variable) is (value type any)
+
+if (condition)
+  (code)
+end if
+
+repeat (value) times
+  (code)
+end repeat
+
+repeat until (value)
+  (code)
+end repeat
+
+show (value)
+
+Condition:
+a is 5
+a is between 10 and 100
+a is > or = 5

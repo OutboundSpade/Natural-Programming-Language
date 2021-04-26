@@ -2,13 +2,13 @@
   "name": "Natural-Programming-Language",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "directories": {
     "example": "examples"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "clear && node index.js"
+    "start": "clear && node src/index.js"
   },
   "keywords": [
     "Natural-Programming-Language",
@@ -19,5 +19,8 @@
   ],
   "author": "Charles Steen",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "commander": "^7.2.0",
+    "listr": "^0.14.3"
+  }
 }
