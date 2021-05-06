@@ -1,7 +1,5 @@
 class Lexer {
-  static lex(program) {
-
-  }
+  constructor(code, args) {}
 }
 
 module.exports = Lexer;
