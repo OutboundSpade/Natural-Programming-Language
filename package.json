@@ -20,7 +20,7 @@
   "author": "Charles Steen",
   "license": "MIT",
   "dependencies": {
-    "commander": "^7.2.0",
-    "listr": "^0.14.3"
+    "listr": "^0.14.3",
+    "rxjs": "^7.0.0"
   }
 }

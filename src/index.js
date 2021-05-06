@@ -1,30 +1,31 @@
-const Listr = require("listr");
+const fs = require('fs');
+const path = require('path');
 
-const { Observable } = require("rxjs");
+const Program = require('./output');
+const Lexer = require('./lexer');
 
-const tasks = new Listr([
-  {
-    title: "Success",
-    task: () => {
-      return new Observable((observer) => {
-        observer.next("Foo");
+const file = path.join(__dirname,"../examples/just_vars.npl");
 
-        setTimeout(() => {
-          observer.next("Bar");
-        }, 2000);
-
-        setTimeout(() => {
-          observer.error();
-        }, 4000);
-      });
-    },
+let code = "";
+Program.Tasks({
+  "Get Files": (o) => {
+    o.next(file);
+    try {
+      code = fs.readFileSync(file).toString();
+    } catch(e) {
+      // console.error(`No file or directory: ${file}`);
+      o.error(new Error(`No file: ${file}`));
+    }
+    setTimeout(() => {
+    o.complete();
+    },2000);
   },
-  {
-    title: "Failure",
-    task: () => Promise.reject(new Error("Bar2")),
-  },
-]);
-
-tasks.run().catch((e) => {
-  // console.log(e);
+  "Lexer": (o) => {
+    o.next(file);
+    let tokenFile = Lexer(code);
+    console.log(`${code}\n\n===\n\n${tokenFile.toString()}`);
+    o.complete();
+  }
 });
+
+Program.start();
