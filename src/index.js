@@ -4,7 +4,7 @@ const path = require('path');
 const Program = require('./output');
 const Lexer = require('./lexer');
 
-const file = path.join(__dirname,"../examples/just_vars.npl");
+const file = path.join(__dirname,"./testing.npl");
 
 let code = "";
 Program.Tasks({
@@ -16,14 +16,12 @@ Program.Tasks({
       // console.error(`No file or directory: ${file}`);
       o.error(new Error(`No file: ${file}`));
     }
-    setTimeout(() => {
     o.complete();
-    },2000);
   },
   "Lexer": (o) => {
     o.next(file);
-    let tokenFile = Lexer(code);
-    console.log(`${code}\n\n===\n\n${tokenFile.toString()}`);
+    let lexedCode = Lexer(code);
+    console.log(`${code}\n\n===\n\n${lexedCode.toString()}`);
     o.complete();
   }
 });
