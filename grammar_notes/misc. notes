@@ -1,0 +1,7 @@
+The language should be able to take input from speech to text
+
+Parts of NPL:
+
+1. Lexer
+2. Parser
+3. Emmeter
