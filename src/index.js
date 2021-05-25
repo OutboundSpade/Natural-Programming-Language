@@ -11,12 +11,16 @@ Program.Tasks({
   "Get Files": (o) => {
     o.next(file);
     try {
+      setTimeout(() => {
       code = fs.readFileSync(file).toString();
+      o.complete();
+      },2000);
+      
     } catch(e) {
       // console.error(`No file or directory: ${file}`);
       o.error(new Error(`No file: ${file}`));
     }
-    o.complete();
+    
   },
   "Lexer": (o) => {
     o.next(file);
