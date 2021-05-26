@@ -55,4 +55,3 @@ array.forEach((item, i) => {
   <code>
 });
 ```
-test
