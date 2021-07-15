@@ -18,9 +18,5 @@
     "NLP"
   ],
   "author": "Charles Steen",
-  "license": "MIT",
-  "dependencies": {
-    "listr": "^0.14.3",
-    "rxjs": "^7.0.0"
-  }
+  "license": "MIT"
 }

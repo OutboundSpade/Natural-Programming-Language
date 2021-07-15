@@ -1,33 +1,21 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const Program = require('./output');
-const Lexer = require('./lexer');
+const Lexer = require("./lexer");
 
-const file = path.join(__dirname,"./testing.npl");
+const file = path.join(__dirname, "./testings.npl");
 
 let code = "";
-Program.Tasks({
-  "Get Files": (o) => {
-    o.next(file);
-    try {
-      setTimeout(() => {
-      code = fs.readFileSync(file).toString();
-      o.complete();
-      },2000);
-      
-    } catch(e) {
-      // console.error(`No file or directory: ${file}`);
-      o.error(new Error(`No file: ${file}`));
-    }
-    
-  },
-  "Lexer": (o) => {
-    o.next(file);
-    let lexedCode = Lexer(code);
-    console.log(`${code}\n\n===\n\n${lexedCode.toString()}`);
-    o.complete();
-  }
-});
 
-Program.start();
+console.log("getting files...");
+try {
+  code = fs.readFileSync(file).toString();
+  console.log("got files!");
+} catch (e) {
+  // console.error(`No file or directory: ${file}`);
+  throw new Error(`No file: ${file}`);
+}
+console.log("Lexing...");
+let lexedCode = Lexer(code);
+console.log("Lexed!");
+console.log(`${code}\n\n===\n\n${lexedCode.toString()}`);
