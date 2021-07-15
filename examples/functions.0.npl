@@ -1,0 +1,21 @@
+Prefix:
+
+code
+task
+job
+
+Parameter operator
+
+uses
+needs
+requires
+
+Code Example:
+
+code greet uses name
+say "Hello " name "!"
+end code
+
+ask "What is your name?"
+name is the answer
+greet name
