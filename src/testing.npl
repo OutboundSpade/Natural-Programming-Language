@@ -1,3 +1,7 @@
-a is 5
-++-- + -
-err=9
+a is 0
+b is 1
+repeat 100 times
+  sum = a + b
+  a is b
+  b is sum
+end repeat
