@@ -2,13 +2,15 @@
   "name": "Natural-Programming-Language",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "directories": {
     "example": "examples"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "clear && node src/index.js"
+    "build": "tsc",
+    "run": "npm run build && npm run start",
+    "start": "clear && node ."
   },
   "keywords": [
     "Natural-Programming-Language",
@@ -17,6 +19,14 @@
     "nlp",
     "NLP"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OutboundSpade/Natural-Programming-Language.git"
+  },
   "author": "Charles Steen",
-  "license": "MIT"
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "typescript": "^4.3.5",
+    "@types/node": "^16.4.10"
+  }
 }
