@@ -1,0 +1,7 @@
+code greet uses n
+	say "Hello " + name
+end
+
+name = ask "What is your name?"
+
+greet name

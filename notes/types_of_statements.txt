@@ -1,0 +1,15 @@
+repeat ... times
+
+repeat while ...
+
+repeat until ... (repeat while !...)
+
+if ... then
+
+otherwize if ... (else if ...)
+
+otherwize (else)
+
+end (if|repeat)
+
+... is ... (... = ...)
